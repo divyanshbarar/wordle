@@ -1,50 +1,92 @@
-# Welcome to your Expo app 👋
+# Wordle Clone - React Native (Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📱 Overview
+A Wordle game clone built with React Native and Expo that includes all the classic Wordle gameplay features plus daily challenges, statistics tracking, and social sharing.
 
-## Get started
+## ✨ Features
+- 🎯 Daily challenge mode with persistent game state
+- 📊 Comprehensive game statistics
+- 🔄 Sleek tile flip animations
+- ⌨️ Virtual keyboard with color feedback
+- 📤 Share results with emoji grid
+- 🌙 Responsive design for all screen sizes
 
-1. Install dependencies
+## 🛠️ Technologies Used
+- React Native
+- Expo
+- AsyncStorage (for data persistence)
+- React Native Share (for social sharing)
+- React Native Animated (for animations)
 
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14 or newer)
+- Expo CLI (`npm install -g expo-cli`)
+- Yarn or npm
+
+### Installation
+1. Clone the repository
    ```bash
+   git clone https://github.com/your-username/wordle-react-native.git
+   cd wordle-react-native
+   ```
+
+2. Install dependencies
+   ```bash
+   yarn install
+   # or
    npm install
    ```
 
-2. Start the app
-
+3. Start the development server
    ```bash
-   npx expo start
+   expo start
    ```
 
-In the output, you'll find options to open the app in a
+### Running the App
+- **iOS Simulator**: Press `i` in the Expo CLI
+- **Android Emulator**: Press `a` in the Expo CLI
+- **Physical Device**: Scan the QR code with the Expo Go app
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## 📂 Project Structure
+```
+wordle-react-native/
+├── assets/               # App icons and splash screen
+├── App.js                # Main application file
+├── app.json              # Expo configuration
+├── package.json          # Project dependencies
+└── README.md             # This file
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔧 Customization
+### Changing the Word List
+Edit the `WORD_LIST` array in `App.js` to add/remove words. All words must be:
+- Uppercase
+- Exactly 5 letters long
+- No duplicates
 
-## Learn more
+### Styling
+Modify the `StyleSheet` object in `App.js` to change colors, sizes, and layouts.
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📱 Building for Production
+### Android
+```bash
+expo build:android
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### iOS
+```bash
+expo build:ios
+```
 
-## Join the community
+## 📝 Notes
+- The daily challenge word changes at midnight local time
+- Game statistics persist between app sessions
+- Share functionality works with any app that accepts text sharing
 
-Join our community of developers creating universal apps.
+## 🤝 Contributing
+Contributions are welcome! Please open an issue or pull request for any improvements.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📜 License
+This project is licensed under the MIT License.
